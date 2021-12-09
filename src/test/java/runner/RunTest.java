@@ -17,6 +17,7 @@ public class RunTest {
 
     @AfterClass
     public static void report() throws IOException {
-        Runtime.getRuntime().exec("cmd.exe /c mvn cluecumber-report:reporting");
+        if (System.getProperty("os.name").equals("Windows 10"))
+            Runtime.getRuntime().exec("cmd.exe /c mvn cluecumber-report:reporting");
     }
 }
