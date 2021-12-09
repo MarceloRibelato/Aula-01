@@ -106,8 +106,8 @@ public class GorestSteps extends ApiRequest {
         super.DELETE();
     }
 
-    @Entao("o usuario é deletado corretamente")
-    public void oUsuarioÉDeletadoCorretamente() {
+    @Entao("o usuario deve ser deletado corretamente")
+    public void oUsuarioDeveSerDeletadoCorretamente() {
         assertEquals("", response.asString());
     }
 }

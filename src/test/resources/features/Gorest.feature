@@ -44,5 +44,5 @@ Funcionalidade: Criar e editar contas de usuários
     Dado que possou gorest token valido
     E existe um usuario cadastrado na api
     Quando deleto esse usuario
-    Entao o usuario é deletado corretamente
+    Entao o usuario deve ser deletado corretamente
     E o status code do request deve ser 204

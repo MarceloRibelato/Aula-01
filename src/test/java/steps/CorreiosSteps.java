@@ -5,7 +5,7 @@ import api.ApiRequest;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
+import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import utils.PropertiesUtils;
 
@@ -29,7 +29,7 @@ public class CorreiosSteps extends ApiRequest {
         super.GET();
     }
 
-    @Então("o valor do frete deve ser calculado")
+    @Entao("o valor do frete deve ser calculado")
     public void o_valor_do_frete_deve_ser_calculado() {
         assertTrue(Float.parseFloat(response.xmlPath().getString("Servicos.cServico.Valor")
                 .replace(",", ".")) > 0);
@@ -47,7 +47,7 @@ public class CorreiosSteps extends ApiRequest {
         super.GET();
     }
 
-    @Então("o valor do frete deve ser {string}")
+    @Entao("o valor do frete deve ser {string}")
     public void oValorDoFreteDeveSer(String valorEsperado) {
         assertEquals(valorEsperado, response.xmlPath().getString("Servicos.cServico.Valor"));
     }
@@ -61,7 +61,7 @@ public class CorreiosSteps extends ApiRequest {
         super.GET();
     }
 
-    @Então("deve ser exibida a mensagem {string}")
+    @Entao("deve ser exibida a mensagem {string}")
     public void deveSerExibidaAMensagem(String msgEsperada) {
         assertEquals(msgEsperada, response.xmlPath().getString("Servicos.cServico.MsgErro"));
     }
