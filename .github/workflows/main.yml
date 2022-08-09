@@ -6,4 +6,6 @@ jobs:
   build-test:
     runs-on: windows-latest
     steps:
-     - run: mvn clean test  
+     - uses: actions/checkout@v2
+     - run: mvn test  
+     - uses: actions/setup-java@v2
