@@ -4,7 +4,7 @@ on:
 
 jobs:
   build-test:
-    runs-on: windows 10
+    runs-on: windows10
     steps:
      - uses: actions/checkout@v2
      - run: mvn test  
