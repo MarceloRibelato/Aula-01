@@ -6,9 +6,4 @@ jobs:
   build-test:
     runs-on: windows-latest
     steps:
-     - uses: actions/checkout@v2
      - run: mvn test  
-     - uses: actions/setup-java@v2
-       with:
-        java-version: '11'
-        distribution: 'adopt'
