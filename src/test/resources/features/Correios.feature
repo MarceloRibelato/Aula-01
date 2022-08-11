@@ -21,7 +21,7 @@ Funcionalidade: Calcular o valor do Frete.
     Quando envio um request com dados validos datatable
       | sCepOrigem | sCepDestino | nVlPeso | nVlComprimento | nVlAltura | nVlLargura |
       | 74371520   | 1327000     | 3.00    | 40.00          | 20.00     | 25         |
-    Então o valor do frete deve ser "40,60"
+    Então o valor do frete deve ser "40,61"
     E o status code deve ser 200
 
   @freteEsquemaDeCenario
